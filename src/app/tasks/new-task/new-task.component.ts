@@ -1,13 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { NewTaskData } from '../task/task.model';
 import { TasksService } from '../tasks.service';
 
 @Component({
-  imports: [FormsModule],
   selector: 'app-new-task',
   styleUrl: './new-task.component.css',
   templateUrl: './new-task.component.html',
+  standalone: false,
 })
 export class NewTaskComponent {
   @Input({ required: true }) userId!: string;
